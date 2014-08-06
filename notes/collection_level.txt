@@ -1,0 +1,15 @@
+## `detect` / `find`
+
+
+collection.find_all{ |x| x.downcase == some_input.downcase }
+
+class Student
+  def <=>(other)
+    last_name <=> other.last_name
+  end
+end
+
+
+[attendees].sort_by do |attendees|
+  attendees.last_name
+end

@@ -3,4 +3,4 @@ def factorial(n)
   1.upto(n).inject(:*)
 end
 
-puts factorial(8)/(2*factorial(6))
+puts factorial(19)/(2*factorial(17))

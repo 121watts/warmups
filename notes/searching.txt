@@ -1,0 +1,40 @@
+# Equality
+
+*highest standard
+*pain in TDD
+
+def test_i_win
+  game = Game.new
+  assert_equal "Hooray! You Win!", game.win
+end
+
+def test_i_won
+  game = Game.new
+  assert_equal "hooray! you win!", game.win.downcase
+end
+
+*provides some flexibility but still not good enout
+
+##More Flexibility
+
+def test_i_have_won
+  game = Game.new
+  assert game.win.include?("win")
+end
+
+# Using Regular Expressions
+
+````ruby
+def test_i_win_with_guess_count
+  game = Game.new
+  game.guess("asdf")
+  game.guess("dfer")
+
+  #Check that game win message
+  #has a count of turns
+
+  assert_equal 2, game.win
+end
+````
+
+## `=~` The Bacon Cannon
